@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="3.1" xmlns="https://jakarta.ee/xml/ns/persistence">
+  <persistence-unit name="FerrocarrilPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+    <!-- 🔥 ENTIDADES -->
+    <class>com.example.productos.Vagon</class>
+    <class>com.example.productos.Persistencia</class>
+    <class>com.example.productos.Locomotora</class>
+    <class>com.example.productos.Tren</class>
+    <properties>
+      <!-- 🔌 CONEXIÓN REAL -->
+      <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/bd_ferrocarril"/>
+      <property name="jakarta.persistence.jdbc.user" value="postgres"/>
+      <property name="jakarta.persistence.jdbc.password" value="1590"/>
+      <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+      <!-- ⚙️ HIBERNATE -->
+      <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+      <!-- 🔥 CREA TABLAS SIEMPRE -->
+      <property name="hibernate.hbm2ddl.auto" value="create"/>
+      <!-- 👀 LOG -->
+      <property name="hibernate.show_sql" value="true"/>
+      <property name="hibernate.format_sql" value="true"/>
+    </properties>
+  </persistence-unit>
+</persistence>
