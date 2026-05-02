@@ -39,6 +39,6 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.release>23</maven.compiler.release>
-        <exec.mainClass>com.mycompany.persistencia.Tren</exec.mainClass>
+        <exec.mainClass>com.productos.proyectopersistencia002.ProyectoPersistencia002</exec.mainClass>
     </properties>
 </project>
